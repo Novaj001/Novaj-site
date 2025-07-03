@@ -3,110 +3,169 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ebook: Nova Jornada | NOVAJ</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <title>NOVAJ 3D | A Máquina Milionária</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css"/>
   <style>
-    :root {
-      --bg-gradient: linear-gradient(to right, #0f0c29, #302b63, #24243e);
-      --primary-color: #ff6b6b;
-      --card-bg: #1e1e2f;
-      --accent: #00cec9;
-    }
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Orbitron', sans-serif;
     }
-
     body {
-      background: var(--bg-gradient);
+      background-color: #0a0a0a;
       color: white;
-      padding: 2rem;
+      overflow-x: hidden;
     }
-
-    .container {
-      max-width: 800px;
+    header {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
+      box-shadow: 0 0 30px #ff003c;
+    }
+    h1 {
+      font-size: 3.5rem;
+      color: #ff003c;
+      text-shadow: 0 0 15px #ff003c;
+    }
+    .cta-section {
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+    .cta-section a {
+      background: #ff003c;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 15px #ff003c;
+      transition: transform 0.3s;
+    }
+    .cta-section a:hover {
+      transform: scale(1.05);
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 4rem 2rem;
+      max-width: 1200px;
       margin: auto;
-      background: var(--card-bg);
+    }
+    .product {
+      background: rgba(255, 0, 60, 0.05);
+      border: 1px solid #ff003c33;
       border-radius: 20px;
       padding: 2rem;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-      animation: fadeIn 1s ease-in-out;
-    }
-
-    h1 {
       text-align: center;
-      font-size: 2.5rem;
+      box-shadow: 0 0 20px #ff003c20;
+      transition: transform 0.3s;
+    }
+    .product:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 30px #ff003c55;
+    }
+    .product h3 {
+      color: #ff003c;
       margin-bottom: 1rem;
     }
-
-    .price {
+    .product a {
+      background: #ff003c;
+      padding: 0.5rem 1.5rem;
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+    .video-section {
       text-align: center;
-      font-size: 1.5rem;
-      color: var(--accent);
+      padding: 3rem 2rem;
+    }
+    .video-section iframe {
+      width: 90%;
+      max-width: 720px;
+      height: 400px;
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 0 20px #ff003c80;
+    }
+    .community {
+      background: #111;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .community h2 {
+      color: #ff003c;
       margin-bottom: 1rem;
     }
-
-    p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      margin-bottom: 1rem;
-    }
-
-    .buy-button {
-      display: block;
-      width: max-content;
-      margin: 2rem auto 0;
-      background: var(--primary-color);
+    .community a {
+      background: #ff003c;
       padding: 1rem 2rem;
-      color: #fff;
+      color: white;
       border-radius: 50px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1.2rem;
-      transition: background 0.3s ease;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      margin-top: 2rem;
+      display: inline-block;
     }
-
-    .buy-button:hover {
-      background: #ff3b3b;
-    }
-
-    .back {
-      display: block;
-      margin: 2rem auto 0;
+    footer {
+      background: #000;
       text-align: center;
-      color: #aaa;
-      text-decoration: underline;
-      font-size: 0.9rem;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+      padding: 1rem;
+      color: #777;
+      font-size: 0.8rem;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>📘 Ebook: Nova Jornada</h1>
-    <div class="price"><strong>199 MT</strong></div>
-    <p>
-      Este ebook é o teu ponto de partida para a revolução digital. Nele, vais descobrir:
-    </p>
-    <ul>
-      <li>✅ Como mudar teu mindset para vencer no digital</li>
-      <li>✅ Estratégias práticas para começar com o que tens</li>
-      <li>✅ Dicas de produtividade e mentalidade de alta performance</li>
-    </ul>
-    <p>
-      Criado especialmente para jovens em Moçambique e outros países africanos que querem gerar rendimento online com propósito e clareza.
-    </p>
+  <header>
+    <h1>NOVAJ 3D</h1>
+    <p>A Máquina Milionária da Nova Geração — Mindset, Negócios e Liberdade Digital</p>
+  </header>
 
-    <a class="buy-button" href="https://go.hotmart.com/SEU_LINK_HOTMART" target="_blank">Comprar Agora na Hotmart</a>
-    <a class="back" href="index.html">← Voltar à Página Inicial</a>
-  </div>
+  <section class="cta-section">
+    <h2>🔥 Começa a Tua Nova Jornada Agora</h2>
+    <a href="#produtos">Ver Produtos</a>
+  </section>
+
+  <section id="produtos" class="products">
+    <div class="product">
+      <h3>📘 Ebook: Nova Jornada</h3>
+      <p>Descobre o mapa mental e estratégico para começares no digital sem desculpas.</p>
+      <p><strong>199 MT</strong></p>
+      <a href="produto1.html">Ver Mais</a>
+    </div>
+    <div class="product">
+      <h3>🧠 Curso: Marketing Level IA</h3>
+      <p>12 aulas práticas para usar Inteligência Artificial e vender no digital como os grandes.</p>
+      <p><strong>899 MT</strong></p>
+      <a href="produto2.html">Ver Mais</a>
+    </div>
+    <div class="product">
+      <h3>🚀 Ebook: Mente Nível Elon Musk</h3>
+      <p>100 páginas para desbloquear tua mente e operar no nível dos titãs.</p>
+      <p><strong>299 MT</strong></p>
+      <a href="produto3.html">Ver Mais</a>
+    </div>
+  </section>
+
+  <section class="video-section">
+    <h2>🎥 Assista à VSL Exclusiva</h2>
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </section>
+
+  <section class="community">
+    <h2>🤝 Comunidade NOVAJ</h2>
+    <p>Junta-te a outros jovens ambiciosos, compartilha ideias e aprende estratégias com os melhores.</p>
+    <a href="#">Entrar na Comunidade</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 NOVAJ. Todos os direitos reservados.</p>
+  </footer>
+
 </body>
 </html>
