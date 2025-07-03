@@ -1,21 +1,20 @@
 <html lang="pt">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NOVAJ - Máquina Milionária da Nova Geração</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NOVAJ - A Máquina Milionária da Nova Geração</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Orbitron', sans-serif;
     }
 
     body {
-      background: #0a0a0a;
-      color: white;
+      background-color: #000;
+      color: #fff;
       line-height: 1.6;
       overflow-x: hidden;
     }
@@ -23,187 +22,209 @@
     header {
       text-align: center;
       padding: 3rem 1rem;
-      background: linear-gradient(90deg, #ff0000, #1a1a1a);
-      box-shadow: 0 0 20px red;
+      background: linear-gradient(to bottom, #000000, #1a0000);
     }
 
     h1 {
-      font-size: 3.5rem;
-      color: #fff;
+      font-size: 4rem;
+      color: red;
+      text-shadow: 0 0 20px red;
+    }
+
+    h2, h3 {
+      color: #ff0000;
       text-shadow: 0 0 10px red;
     }
 
-    p.lead {
-      font-size: 1.5rem;
-      margin-top: 1rem;
-      color: #ffcccc;
-    }
-
-    .cta-message {
-      background: #1a1a1a;
-      padding: 2rem;
-      text-align: center;
-      box-shadow: 0 0 10px #ff4d4d;
-    }
-
-    .cta-message h2 {
-      color: #ff4d4d;
-      margin-bottom: 1rem;
-    }
-
-    .cta-message p {
-      max-width: 700px;
+    p {
+      max-width: 800px;
       margin: auto;
+      font-size: 1.2rem;
+      padding: 0.5rem 1rem;
     }
 
-    .products-section {
-      padding: 4rem 2rem;
-      background: #0f0f0f;
+    .cta {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .cta a {
+      padding: 1rem 2rem;
+      border: 2px solid red;
+      color: red;
+      background: transparent;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      box-shadow: 0 0 15px red;
+      transition: 0.3s;
+    }
+
+    .cta a:hover {
+      background: red;
+      color: #000;
+    }
+
+    .benefits {
+      padding: 2rem;
+      background: #0a0a0a;
       text-align: center;
     }
 
-    .products-section h2 {
-      font-size: 2rem;
-      color: #ff3333;
-      margin-bottom: 2rem;
+    .benefits ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 1rem;
     }
 
-    .products-grid {
+    .benefits li {
+      padding: 0.5rem;
+      font-size: 1.1rem;
+      color: #f33;
+      text-shadow: 0 0 8px red;
+    }
+
+    .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2rem;
+      padding: 2rem;
       max-width: 1200px;
       margin: auto;
     }
 
     .product {
-      background: #1a1a1a;
-      border: 1px solid #ff4d4d;
-      border-radius: 15px;
-      padding: 2rem;
-      box-shadow: 0 0 15px #ff0000;
-      transition: 0.3s;
+      background: #0a0a0a;
+      border: 2px solid red;
+      border-radius: 20px;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 0 20px red;
+      transition: 0.3s ease-in-out;
     }
 
     .product:hover {
       transform: scale(1.05);
+      box-shadow: 0 0 30px red;
     }
 
-    .product h3 {
-      color: #fff;
+    .product img {
+      width: 100px;
+      height: 100px;
       margin-bottom: 1rem;
-    }
-
-    .product p {
-      color: #ccc;
-      margin-bottom: 1rem;
+      filter: drop-shadow(0 0 10px red);
     }
 
     .product a {
       display: inline-block;
-      padding: 0.7rem 1.5rem;
-      background: #ff0000;
-      color: white;
-      border-radius: 50px;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: red;
+      color: #000;
       text-decoration: none;
+      border-radius: 30px;
       font-weight: bold;
     }
 
-    .product a:hover {
-      background: #cc0000;
-    }
-
-    .community-section {
+    .community {
       background: #111;
-      padding: 4rem 2rem;
+      padding: 3rem;
       text-align: center;
     }
 
-    .community-section h2 {
-      color: #ff0000;
-      margin-bottom: 1rem;
-    }
-
-    .community-section p {
-      max-width: 800px;
-      margin: auto;
-      color: #bbb;
-      margin-bottom: 2rem;
-    }
-
-    .community-section a {
-      background: #ff3333;
+    .community a {
+      display: inline-block;
+      margin-top: 1.5rem;
       padding: 1rem 2rem;
+      background: red;
       border-radius: 50px;
       color: white;
-      text-decoration: none;
       font-weight: bold;
-      box-shadow: 0 0 10px red;
+      text-decoration: none;
+      box-shadow: 0 0 15px red;
+    }
+
+    .testimonials {
+      background: #0a0a0a;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    .testimonial {
+      margin: 1rem auto;
+      max-width: 700px;
+      font-style: italic;
+      color: #ccc;
     }
 
     footer {
+      background: #000;
       text-align: center;
-      background: #0a0a0a;
       padding: 1rem;
+      color: #aaa;
       font-size: 0.9rem;
-      color: #888;
-      border-top: 1px solid #222;
     }
   </style>
 </head>
-
 <body>
   <header>
-    <h1>NOVAJ 🚀</h1>
-    <p class="lead">A Máquina Milionária da Nova Geração — Mindset, Negócios e Liberdade Digital</p>
+    <h1>NOVAJ</h1>
+    <h2>A MÁQUINA MILIONÁRIA DA NOVA GERAÇÃO</h2>
+    <div class="cta">
+      <h3>🔥 COMEÇA A TUA NOVA JORNADA AGORA</h3>
+      <a href="#produtos">Ver Produtos</a>
+    </div>
   </header>
 
-  <section class="cta-message">
-    <h2>⚠️ Queres Mudar a Tua Vida em 90 Dias?</h2>
-    <p>Descobre os 3 produtos mais poderosos que estão a transformar jovens comuns em empreendedores digitais de sucesso em Moçambique. Não percas esta oportunidade!</p>
+  <section class="benefits">
+    <h2>💡 Benefícios ao Participar</h2>
+    <ul>
+      <li>🔓 Desbloqueia teu potencial mental e estratégico</li>
+      <li>🤖 Aprende a vender com Inteligência Artificial</li>
+      <li>💼 Entra para uma comunidade de elite digital</li>
+      <li>🚀 Ganha mentalidade de sucesso e liberdade financeira</li>
+    </ul>
   </section>
 
-  <section class="products-section" id="produtos">
-    <h2>🔥 Escolhe o Teu Produto</h2>
-    <div class="products-grid">
-      <div class="product">
-        <h3>📘 Nova Jornada</h3>
-        <p>Ebook para começar no digital com passos claros e sem enrolação.</p>
-        <p><strong>199 MT</strong></p>
-        <a href="produto1.html">Ver Mais</a>
-      </div>
-      <div class="product">
-        <h3>🧠 Marketing Level IA</h3>
-        <p>Curso com 12 aulas práticas para dominar a inteligência artificial nos negócios.</p>
-        <p><strong>899 MT</strong></p>
-        <a href="produto2.html">Ver Mais</a>
-      </div>
-      <div class="product">
-        <h3>🚀 Mente Nível Elon Musk</h3>
-        <p>Ebook com 100 páginas de puro desbloqueio mental para pensar como um titã.</p>
-        <p><strong>299 MT</strong></p>
-        <a href="produto3.html">Ver Mais</a>
-      </div>
+  <section id="produtos" class="products">
+    <div class="product">
+      <img src="https://cdn-icons-png.flaticon.com/512/2991/2991108.png" alt="Ebook Nova Jornada">
+      <h3>EBOOK: NOVA JORNADA</h3>
+      <p>Descobre o mapa mental e estratégico para começares no digital sem desculpas.</p>
+      <p><strong>199 MT</strong></p>
+      <a href="/produto1.html">Ver mais</a>
+    </div>
+    <div class="product">
+      <img src="https://cdn-icons-png.flaticon.com/512/2615/2615934.png" alt="Curso Marketing IA">
+      <h3>CURSO: MARKETING LEVEL IA</h3>
+      <p>12 aulas práticas para usar inteligência artificial e vender no digital como os grandes.</p>
+      <p><strong>899 MT</strong></p>
+      <a href="/produto2.html">Ver mais</a>
+    </div>
+    <div class="product">
+      <img src="https://cdn-icons-png.flaticon.com/512/3011/3011270.png" alt="Mente Elon Musk">
+      <h3>EBOOK: MENTE NÍVEL ELON MUSK</h3>
+      <p>100 páginas para desbloquear tua mente e operar no nível dos titãs.</p>
+      <p><strong>299 MT</strong></p>
+      <a href="/produto3.html">Ver mais</a>
     </div>
   </section>
 
-  <section class="community-section">
-    <h2>🤝 Comunidade NOVAJ</h2>
-    <p>Junta-te à comunidade mais dedicada de jovens empreendedores digitais. Partilha ideias, aprende estratégias e conecta-te com mentes que pensam grande.</p>
-    <a href="https://t.me/seugrupo" target="_blank">Entrar na Comunidade</a>
+  <section class="community">
+    <h2>🤝 COMUNIDADE NOVAJ</h2>
+    <p>Junta-te a outros jovens ambiciosos, compartilha ideias, aprende estratégias e conecta-te com os afiliados mais dedicados de Moçambique e do mundo.</p>
+    <a href="#">Entrar na Comunidade</a>
+  </section>
+
+  <section class="testimonials">
+    <h2>🌟 Testemunhos</h2>
+    <p class="testimonial">"Com NOVAJ, finalmente entendi o caminho para fazer dinheiro online de verdade. Incrível!" – Pedro M.</p>
+    <p class="testimonial">"O curso de IA abriu minha mente, e os ebooks mudaram minha mentalidade." – Carla T.</p>
   </section>
 
   <footer>
     <p>&copy; 2025 NOVAJ. Todos os direitos reservados.</p>
   </footer>
-
-  <!-- AQUI VOCÊ PODE ADICIONAR VÍDEO VSL -->
-  <!-- <section class="vsl">
-      <video src="link-do-vsl.mp4" controls></video>
-  </section> -->
-
-  <!-- AQUI PODEMOS ADICIONAR MAIS PRODUTOS OU TESTEMUNHOS DE CLIENTES -->
-
 </body>
-
 </html>
