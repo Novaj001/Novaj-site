@@ -1,171 +1,209 @@
-<!DOCTYPE html>
 <html lang="pt">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NOVAJ 3D | A Máquina Milionária</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css"/>
+  <title>NOVAJ - Máquina Milionária da Nova Geração</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Orbitron', sans-serif;
+      font-family: 'Montserrat', sans-serif;
     }
+
     body {
-      background-color: #0a0a0a;
+      background: #0a0a0a;
       color: white;
+      line-height: 1.6;
       overflow-x: hidden;
     }
+
     header {
       text-align: center;
-      padding: 4rem 2rem;
-      background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
-      box-shadow: 0 0 30px #ff003c;
+      padding: 3rem 1rem;
+      background: linear-gradient(90deg, #ff0000, #1a1a1a);
+      box-shadow: 0 0 20px red;
     }
+
     h1 {
       font-size: 3.5rem;
-      color: #ff003c;
-      text-shadow: 0 0 15px #ff003c;
+      color: #fff;
+      text-shadow: 0 0 10px red;
     }
-    .cta-section {
+
+    p.lead {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      color: #ffcccc;
+    }
+
+    .cta-message {
+      background: #1a1a1a;
+      padding: 2rem;
       text-align: center;
-      padding: 3rem 2rem;
+      box-shadow: 0 0 10px #ff4d4d;
     }
-    .cta-section a {
-      background: #ff003c;
-      color: white;
-      padding: 1rem 2rem;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 0 15px #ff003c;
-      transition: transform 0.3s;
+
+    .cta-message h2 {
+      color: #ff4d4d;
+      margin-bottom: 1rem;
     }
-    .cta-section a:hover {
-      transform: scale(1.05);
+
+    .cta-message p {
+      max-width: 700px;
+      margin: auto;
     }
-    .products {
+
+    .products-section {
+      padding: 4rem 2rem;
+      background: #0f0f0f;
+      text-align: center;
+    }
+
+    .products-section h2 {
+      font-size: 2rem;
+      color: #ff3333;
+      margin-bottom: 2rem;
+    }
+
+    .products-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
-      padding: 4rem 2rem;
       max-width: 1200px;
       margin: auto;
     }
+
     .product {
-      background: rgba(255, 0, 60, 0.05);
-      border: 1px solid #ff003c33;
-      border-radius: 20px;
+      background: #1a1a1a;
+      border: 1px solid #ff4d4d;
+      border-radius: 15px;
       padding: 2rem;
-      text-align: center;
-      box-shadow: 0 0 20px #ff003c20;
-      transition: transform 0.3s;
+      box-shadow: 0 0 15px #ff0000;
+      transition: 0.3s;
     }
+
     .product:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 0 30px #ff003c55;
+      transform: scale(1.05);
     }
+
     .product h3 {
-      color: #ff003c;
+      color: #fff;
       margin-bottom: 1rem;
     }
+
+    .product p {
+      color: #ccc;
+      margin-bottom: 1rem;
+    }
+
     .product a {
-      background: #ff003c;
-      padding: 0.5rem 1.5rem;
-      color: white;
-      text-decoration: none;
-      border-radius: 25px;
       display: inline-block;
-      margin-top: 1rem;
-    }
-    .video-section {
-      text-align: center;
-      padding: 3rem 2rem;
-    }
-    .video-section iframe {
-      width: 90%;
-      max-width: 720px;
-      height: 400px;
-      border: none;
-      border-radius: 20px;
-      box-shadow: 0 0 20px #ff003c80;
-    }
-    .community {
-      background: #111;
-      padding: 3rem 2rem;
-      text-align: center;
-    }
-    .community h2 {
-      color: #ff003c;
-      margin-bottom: 1rem;
-    }
-    .community a {
-      background: #ff003c;
-      padding: 1rem 2rem;
+      padding: 0.7rem 1.5rem;
+      background: #ff0000;
       color: white;
       border-radius: 50px;
       text-decoration: none;
       font-weight: bold;
-      margin-top: 2rem;
-      display: inline-block;
     }
-    footer {
-      background: #000;
+
+    .product a:hover {
+      background: #cc0000;
+    }
+
+    .community-section {
+      background: #111;
+      padding: 4rem 2rem;
       text-align: center;
+    }
+
+    .community-section h2 {
+      color: #ff0000;
+      margin-bottom: 1rem;
+    }
+
+    .community-section p {
+      max-width: 800px;
+      margin: auto;
+      color: #bbb;
+      margin-bottom: 2rem;
+    }
+
+    .community-section a {
+      background: #ff3333;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 10px red;
+    }
+
+    footer {
+      text-align: center;
+      background: #0a0a0a;
       padding: 1rem;
-      color: #777;
-      font-size: 0.8rem;
+      font-size: 0.9rem;
+      color: #888;
+      border-top: 1px solid #222;
     }
   </style>
 </head>
+
 <body>
   <header>
-    <h1>NOVAJ 3D</h1>
-    <p>A Máquina Milionária da Nova Geração — Mindset, Negócios e Liberdade Digital</p>
+    <h1>NOVAJ 🚀</h1>
+    <p class="lead">A Máquina Milionária da Nova Geração — Mindset, Negócios e Liberdade Digital</p>
   </header>
 
-  <section class="cta-section">
-    <h2>🔥 Começa a Tua Nova Jornada Agora</h2>
-    <a href="#produtos">Ver Produtos</a>
+  <section class="cta-message">
+    <h2>⚠️ Queres Mudar a Tua Vida em 90 Dias?</h2>
+    <p>Descobre os 3 produtos mais poderosos que estão a transformar jovens comuns em empreendedores digitais de sucesso em Moçambique. Não percas esta oportunidade!</p>
   </section>
 
-  <section id="produtos" class="products">
-    <div class="product">
-      <h3>📘 Ebook: Nova Jornada</h3>
-      <p>Descobre o mapa mental e estratégico para começares no digital sem desculpas.</p>
-      <p><strong>199 MT</strong></p>
-      <a href="produto1.html">Ver Mais</a>
-    </div>
-    <div class="product">
-      <h3>🧠 Curso: Marketing Level IA</h3>
-      <p>12 aulas práticas para usar Inteligência Artificial e vender no digital como os grandes.</p>
-      <p><strong>899 MT</strong></p>
-      <a href="produto2.html">Ver Mais</a>
-    </div>
-    <div class="product">
-      <h3>🚀 Ebook: Mente Nível Elon Musk</h3>
-      <p>100 páginas para desbloquear tua mente e operar no nível dos titãs.</p>
-      <p><strong>299 MT</strong></p>
-      <a href="produto3.html">Ver Mais</a>
+  <section class="products-section" id="produtos">
+    <h2>🔥 Escolhe o Teu Produto</h2>
+    <div class="products-grid">
+      <div class="product">
+        <h3>📘 Nova Jornada</h3>
+        <p>Ebook para começar no digital com passos claros e sem enrolação.</p>
+        <p><strong>199 MT</strong></p>
+        <a href="produto1.html">Ver Mais</a>
+      </div>
+      <div class="product">
+        <h3>🧠 Marketing Level IA</h3>
+        <p>Curso com 12 aulas práticas para dominar a inteligência artificial nos negócios.</p>
+        <p><strong>899 MT</strong></p>
+        <a href="produto2.html">Ver Mais</a>
+      </div>
+      <div class="product">
+        <h3>🚀 Mente Nível Elon Musk</h3>
+        <p>Ebook com 100 páginas de puro desbloqueio mental para pensar como um titã.</p>
+        <p><strong>299 MT</strong></p>
+        <a href="produto3.html">Ver Mais</a>
+      </div>
     </div>
   </section>
 
-  <section class="video-section">
-    <h2>🎥 Assista à VSL Exclusiva</h2>
-    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
-  </section>
-
-  <section class="community">
+  <section class="community-section">
     <h2>🤝 Comunidade NOVAJ</h2>
-    <p>Junta-te a outros jovens ambiciosos, compartilha ideias e aprende estratégias com os melhores.</p>
-    <a href="#">Entrar na Comunidade</a>
+    <p>Junta-te à comunidade mais dedicada de jovens empreendedores digitais. Partilha ideias, aprende estratégias e conecta-te com mentes que pensam grande.</p>
+    <a href="https://t.me/seugrupo" target="_blank">Entrar na Comunidade</a>
   </section>
 
   <footer>
     <p>&copy; 2025 NOVAJ. Todos os direitos reservados.</p>
   </footer>
 
+  <!-- AQUI VOCÊ PODE ADICIONAR VÍDEO VSL -->
+  <!-- <section class="vsl">
+      <video src="link-do-vsl.mp4" controls></video>
+  </section> -->
+
+  <!-- AQUI PODEMOS ADICIONAR MAIS PRODUTOS OU TESTEMUNHOS DE CLIENTES -->
+
 </body>
+
 </html>
